@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
         rvTweet = findViewById(R.id.rv_tweets);
         prefUtils = new PrefUtils(this);
         TwitterSession session = new Gson().fromJson(prefUtils.getSeesion(), TwitterSession.class);
-        Log.e("sessio", new Gson().toJson(session));
 //        if (session != null)
 //            twitterLoginButton.setVisibility(View.VISIBLE);
 //        else {
@@ -89,8 +88,6 @@ public class MainActivity extends AppCompatActivity {
                 false).enqueue(new Callback<List<Tweet>>() {
             @Override
             public void success(Result<List<Tweet>> result) {
-                Log.e("Size", result.data.size() + "");
-                Log.e("TWeet", gson.toJson(result.data.get(0)));
                 prefUtils.saveTweets(gson.toJson(result.data));
                 if (dataList != null)
                     dataList.clear();
