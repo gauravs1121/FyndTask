@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Twitter Feed</string>
+        <string name="API_KEY">R50EEsqPeAYHMNVXIBIczECoQ</string>
+        <string name="SECRET_KEY">0JmGIBq2Xagef78veQn5yFjJEJS0DM3dMwFHLtAazZMGcuIyBA</string>
+</resources>
